@@ -1,9 +1,8 @@
-package com.tenconding.bank.repository.model;
+package com.tencoding.bank.repository.model;
 
 import java.sql.Timestamp;
 
 import lombok.Data;
-
 
 @Data
 public class Account {
@@ -13,5 +12,8 @@ public class Account {
 	private Long balance;
 	private Integer userId;
 	private Timestamp createdAt;
-		
+
+	
+	
+	
 }

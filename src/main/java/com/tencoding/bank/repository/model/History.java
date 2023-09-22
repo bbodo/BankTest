@@ -1,4 +1,4 @@
-package com.tenconding.bank.repository.model;
+package com.tencoding.bank.repository.model;
 
 import java.sql.Timestamp;
 

@@ -1,7 +1,9 @@
-package com.tenconding.bank.contorller;
+package com.tencoding.bank.contorller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+@Controller
 public class MainController {
 
 	// 주소 설계
