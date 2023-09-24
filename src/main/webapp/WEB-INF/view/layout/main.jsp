@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+
 <html lang="en">
 <%@ include file="/WEB-INF/view/layout/header.jsp" %> 
     
@@ -18,7 +18,6 @@
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
-  </div>
-</div>
+ 
 
 <%@ include file="/WEB-INF/view/layout/footer.jsp" %>

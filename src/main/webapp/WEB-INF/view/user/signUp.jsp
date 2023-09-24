@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+
 <html lang="en">
 <%@ include file="/WEB-INF/view/layout/header.jsp"%>
 
@@ -10,23 +10,23 @@
 	<h5>어서오세요 환영합니다</h5>
 	<div class="bg-light p-md-5 h-75">
 	  <form action="/user/signup-proc">
-	  <div class="form-grpup>
+	  <div class="form-grpup">
 		<label for="username">username:</label>
-		<input type="text" class="form-control placeholder="Enter username" id="username" name="username">		
+		<input type="text" class="form-control" placeholder="Enter username" id="username" name="username">		
 	</div>
-	<div class="form-grpup>
+	<div class="form-grpup">
 		<label for="pwd">Password:</label>
-		<input type="text" class="form-control placeholder="Enter username" id="username" name="username">		
+		<input type="text" class="form-control" placeholder="Enter password" id="username" name="password">		
 	</div>
-	<div class="form-grpup>
+	<div class="form-grpup">
 		<label for="fullname">Fullname:</label>
-		<input type="text" class="form-control placeholder="Enter username" id="username" name="username">		
+		<input type="text" class="form-control" placeholder="Enter fullname" id="fullname" name="username">		
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 	</div>
 
-</form>
-</div>
 </div>
 
-</div>
 
 <%@ include file="/WEB-INF/view/layout/footer.jsp"%>
