@@ -8,6 +8,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.tencoding.bank.handler.exception.CustomPageException;
 
+
+/**
+ *  View 렌더링을 위해 ModelAndView
+ *  객체를 반환하도록 설계할 때 사용
+ *  예외 page 를 리턴하도록 설계
+ */
+
 @ControllerAdvice // Ioc대상
 @Order(2)
 public class MyPageExceptionHandler {

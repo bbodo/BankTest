@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,31 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-    .m--profile {
-      background-image: url(https://picsum.photos/id/1/350);
-      background-size: cover;  
-      background-position: center;
-      width: 100%;
-      height: 200px;
-    }
-  /*  .f--wrap {
-        position: fixed;    
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        background-color: #f8f9fa;
-    }  */
-    .banner--img {
-        background-image: url(https://picsum.photos/600);
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100%;
-    }
+  <link rel="stylesheet" href="/css/styles.css">
 
-  </style>
 </head>
 <body>
 
@@ -51,13 +29,20 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">HOME</a>
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+      <c:choose>
+      <c:when test="${principal != null}">
+                <li class="nav-item">
+            <a class="nav-link" href="/user/logout">로그아웃</a>
+          </li>
+      </c:when>
+      </c:choose>
+      <li class="nav-item">
+        <a class="nav-link" href="/user/sign-in">SignIn</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">SignIn</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">SignUp</a>
+        <a class="nav-link" href="/user/sign-up">SignUp</a>
       </li>    
     </ul>
   </div>  

@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-
+import com.tencoding.bank.dto.SignInFormDto;
+import com.tencoding.bank.dto.SignUpFormDto;
 import com.tencoding.bank.repository.model.User;
 
 // ibatis -> 2.4 버전 이후로 mybatis 로 이름이 바뀜.
@@ -12,11 +13,11 @@ import com.tencoding.bank.repository.model.User;
 public interface UserRepository {
 	
 	// 매개변수 수정
-//	public int insert(SignUpFormDto dto);
+	public int insert(SignUpFormDto signUpFormDto);
 	public int updateById(User user);
 	public int deleteById(User user);
 	public User findById(Integer id);
-//	public User findByUsernameAndPassword(SignInFormDto signInFormDto);
+	public User findByUsernameAndPassword(SignInFormDto signInFormDto);
 	public List<User> findAll();
 	public User findByUsername(String username);
 	
