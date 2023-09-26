@@ -1,6 +1,7 @@
 package com.tencoding.bank.service;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -43,5 +44,12 @@ public class AccountService {
 		
 		
 	}
+
+	public List<Account> readAccountList(Integer userId) {
+		
+		List<Account> list = accountRepository.findByUserId(userId);
+		return list;
+	}
+	
 
 }

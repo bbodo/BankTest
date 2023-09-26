@@ -4,6 +4,12 @@
 <mapper
 	namespace="com.tencoding.bank.repository.interfaces.AccountRepository">
 
+	<select id="findByUserId"
+		resultType="com.tencoding.bank.repository.model.Account">
+		select * from account_tb where user_id = #{userId};
+	</select>
+
+
 	<insert id="insert">
 		insert into account_tb(number, password, balance,
 		user_id, created_at)
