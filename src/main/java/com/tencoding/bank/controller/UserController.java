@@ -88,6 +88,7 @@ public class UserController {
 		if(signInFormDto.getPassword() == null) {
 			throw new CustomRestfullException("password를 입력하세요", HttpStatus.BAD_REQUEST);
 		}
+		
 		// 2. 서비스 -> 인증된 사용자 여부 확인
 		// principal <-- 접근 주체
 		User principal = userService.signIn(signInFormDto);

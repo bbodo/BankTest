@@ -44,21 +44,24 @@ public class UserService {
 		User userEntity = userRepository.findByUsername(signInFormDto.getUsername());
 
 		// 계정확인
-		if(userEntity == null || userEntity.getUsername().equals(signInFormDto.getUsername()) == false) {
+		if(userEntity == null 
+				|| userEntity.getUsername().equals(signInFormDto.getUsername()) == false) {
 			throw new CustomRestfullException("존재하지 않는 계정입니다.",
 					HttpStatus.INTERNAL_SERVER_ERROR);
 		}
+		
 		// 비번확인
 		boolean isPwdMatched = passwordEncoder
 				.matches(signInFormDto.getPassword(), userEntity.getPassword());
 		
 		System.out.println(signInFormDto.getUsername());
 		System.out.println(signInFormDto.getPassword());
+		System.out.println(userEntity.getPassword());
 		
 		if(isPwdMatched == false) {
-			throw new CustomRestfullException("너 잘못했어.", HttpStatus.INTERNAL_SERVER_ERROR);
+			throw new CustomRestfullException("비번틀림 ㅉ", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		
+	
 		
 		return userEntity;
 

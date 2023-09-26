@@ -23,7 +23,7 @@
 		<div class="form-grup">
 			<label for="balance">임금 금액:</label> 
 			<input type="text" id="balance"
-				class="form-control" placeholder="입금" name="number">
+				class="form-control" placeholder="입금" name="balance">
 		</div>
 		<br>
 		<button type="submit" class="btn btn-primary">계좌 생성</button>

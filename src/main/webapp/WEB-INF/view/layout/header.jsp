@@ -59,7 +59,7 @@
       <p>Lorem ipsum dolor sit ame.</p>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-            <a class="nav-link" href="#">계좌생성</a>
+            <a class="nav-link" href="/account/save">계좌생성</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" href="#">계좌목록</a>
