@@ -12,6 +12,14 @@ public class Account {
 	private Long balance;
 	private Integer userId;
 	private Timestamp createdAt;
+	
+	
+	// 출금 기능
+	public void withdraw(Long amount) {
+		if (this.balance > amount)
+			this.balance -= amount;
+	}
+	
 
 	
 	

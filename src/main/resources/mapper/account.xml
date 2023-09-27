@@ -4,9 +4,14 @@
 <mapper
 	namespace="com.tencoding.bank.repository.interfaces.AccountRepository">
 
+     <select id="findByNumber"
+           resultType="com.tencoding.bank.repository.model.Account">
+     select * from account_tb where number = #{number}
+     </select>
+
 	<select id="findByUserId"
 		resultType="com.tencoding.bank.repository.model.Account">
-		select * from account_tb where user_id = #{userId};
+		select * from account_tb where user_id = #{userId}
 	</select>
 
 

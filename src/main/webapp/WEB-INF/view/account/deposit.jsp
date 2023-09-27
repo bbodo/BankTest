@@ -4,11 +4,11 @@
 
 
 <div class="col-sm-8">
-    <h2>이체페이지(인증)</h2>
+    <h2>입금 페이지(인증)</h2>
     <h5>어서오세요 환영합니다</h5>
     <div class="bg-light p-md-5 h-75">
         <div class="form-group">
-            <form action="" method="post">
+            <form action="/account/deposit" method="post">
                 <div>
                     <label for="amount">이체 금액: </label>
                     <input type="text" id="amount" class="form-control" placeholder="이체금액입력" name="amount">

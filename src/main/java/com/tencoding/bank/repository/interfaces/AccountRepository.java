@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.tencoding.bank.repository.model.Account;
+import com.tencoding.bank.repository.model.History;
 
 @Mapper // 반드시 정의 
 public interface AccountRepository {
